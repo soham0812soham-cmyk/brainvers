@@ -112,30 +112,55 @@ export default function FeaturesPage() {
         </div>
         
         {/* TestVers Features Grid */}
-        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {[
             {
-              title: "Exam Simulation",
-              desc: "Pixel-perfect mock tests simulating real competitive exam interfaces.",
+              title: "Exam Arena",
+              desc: "Experience the real exam environment with our pixel-perfect, strict simulation interface.",
               icon: "ri-macbook-line"
             },
             {
-              title: "Performance Analytics",
-              desc: "Deep analytical reports highlighting weak chapters and question types.",
-              icon: "ri-bar-chart-box-line"
+              title: "Bucket Arena",
+              desc: "Full-fledged deep analysis dividing your attempts into Correct, Incorrect, and Unattempted buckets.",
+              icon: "ri-pie-chart-2-line"
             },
             {
               title: "All-India Ranking",
-              desc: "Predictive ranking system comparing scores across the student network.",
+              desc: "Predictive percentile and rank comparison across the entire TestVers student network.",
               icon: "ri-trophy-line"
+            },
+            {
+              title: "Previous Year Papers",
+              desc: "Authentic PYQs formatted exactly as they appeared, ready to be attempted as timed mocks.",
+              icon: "ri-history-line"
+            },
+            {
+              title: "Detailed Solutions",
+              desc: "In-depth textual and video solutions for every single question in the TestVers library.",
+              icon: "ri-video-chat-line"
+            },
+            {
+              title: "Chapter & Topic Tests",
+              desc: "Granular level practice to master specific concepts before moving to full-length mocks.",
+              icon: "ri-book-read-line"
+            },
+            {
+              title: "Bilingual Support",
+              desc: "Toggle seamlessly between English and Hindi just like in the real examination.",
+              icon: "ri-translate-2"
+            },
+            {
+              title: "Pause & Resume",
+              desc: "Flexible testing modes allowing you to pause tests and resume them when convenient.",
+              icon: "ri-pause-circle-line"
             }
           ].map((feature, i) => (
-            <div key={i} className="bg-bg border border-line rounded-xl p-8 hover:-translate-y-1 transition-transform">
-              <div className="w-12 h-12 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-2xl mb-6">
+            <div key={i} className="bg-bg border border-line rounded-xl p-6 hover:-translate-y-1 transition-transform hover:shadow-lg hover:shadow-blue-500/5 group">
+              <div className="w-12 h-12 rounded-full bg-blue-500/10 text-blue-500 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-blue-500/20 transition-all">
                 <i className={feature.icon}></i>
               </div>
-              <h3 className="text-xl font-bold text-text mb-3">{feature.title}</h3>
-              <p className="text-muted leading-relaxed">{feature.desc}</p>
+              <h3 className="text-lg font-bold text-text mb-2 group-hover:text-blue-500 transition-colors">{feature.title}</h3>
+              <p className="text-sm text-muted leading-relaxed">{feature.desc}</p>
             </div>
           ))}
         </div>
