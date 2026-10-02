@@ -21,9 +21,9 @@ export function AISection() {
               <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center overflow-hidden border border-accent/20 shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
-                  src="https://api.dicebear.com/9.x/bottts/svg?seed=BrainVersTutor&backgroundColor=00a3a8" 
+                  src="/ai-teacher.jpg" 
                   alt="AI Teacher Avatar" 
-                  className="w-full h-full object-cover scale-110"
+                  className="w-full h-full object-cover scale-110 object-top"
                 />
               </div>
               <div>
