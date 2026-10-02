@@ -18,8 +18,13 @@ export function AISection() {
           {/* Top Bar */}
           <div className="bg-bg border-b border-line px-4 py-3 flex items-center justify-between z-10">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center">
-                <i className="ri-robot-2-fill"></i>
+              <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center overflow-hidden border border-accent/20 shrink-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img 
+                  src="https://api.dicebear.com/9.x/bottts/svg?seed=BrainVersTutor&backgroundColor=00a3a8" 
+                  alt="AI Teacher Avatar" 
+                  className="w-full h-full object-cover scale-110"
+                />
               </div>
               <div>
                 <p className="text-sm font-bold text-text leading-tight">BrainVers AI Tutor</p>
