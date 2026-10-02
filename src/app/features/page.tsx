@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { ProductSection } from "@/components/ProductSection";
 import { AISection } from "@/components/AISection";
 
 export const metadata = {
@@ -35,11 +34,67 @@ export default function FeaturesPage() {
             <span className="text-sm font-bold tracking-widest text-accent uppercase">BrainVers</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-text">The Learning Ecosystem.</h2>
-          <p className="mt-4 text-muted max-w-2xl text-lg">
+          <p className="mt-4 text-muted max-w-2xl text-lg mb-16">
             A deeply connected environment where students learn, practice, and receive intelligent guidance every step of the way.
           </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "AI Avatar Teacher",
+                desc: "An intelligent virtual tutor providing real-time guidance and doubt resolution.",
+                icon: "ri-robot-2-line"
+              },
+              {
+                title: "Structured Courses",
+                desc: "Comprehensive syllabus coverage organized into modular, easy-to-digest lessons.",
+                icon: "ri-book-open-line"
+              },
+              {
+                title: "AI Handwritten Notes",
+                desc: "Automatically generated, beautifully formatted handwritten notes for every topic.",
+                icon: "ri-edit-line"
+              },
+              {
+                title: "Online Live Classes",
+                desc: "Breaking geographical barriers with interactive, high-quality live sessions.",
+                icon: "ri-live-line"
+              },
+              {
+                title: "Virtual Study Room",
+                desc: "Collaborative digital spaces to study with peers and stay focused together.",
+                icon: "ri-team-line"
+              },
+              {
+                title: "Hybrid Courses",
+                desc: "The perfect blend of online flexibility and offline accountability.",
+                icon: "ri-building-4-line"
+              },
+              {
+                title: "Typing Software",
+                desc: "Integrated typing practice tools to improve speed and digital literacy.",
+                icon: "ri-keyboard-line"
+              }
+            ].map((feature, i) => (
+              <div key={i} className="group relative p-8 bg-surface rounded-xl border border-line transition-all duration-300 hover:shadow-xl hover:shadow-accent/5 hover:-translate-y-1">
+                <div className="flex items-center justify-between mb-8 pb-6 border-b border-line">
+                  <span className="text-xs font-bold tracking-widest text-muted group-hover:text-accent transition-colors">
+                    0{i + 1}
+                  </span>
+                  <div className="w-12 h-12 rounded-full bg-accent/5 text-accent flex items-center justify-center text-xl group-hover:scale-110 group-hover:bg-accent/10 transition-all duration-300">
+                    <i className={feature.icon}></i>
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold tracking-wide text-text mb-3 group-hover:text-accent transition-colors">
+                  {feature.title}
+                </h3>
+                <p className="text-sm md:text-base text-muted leading-relaxed">
+                  {feature.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
-        <ProductSection />
         <AISection />
       </div>
 
