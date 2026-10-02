@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import { SectionHeader } from "./SectionHeader";
 
 export function AISection() {
   const capabilities = [
@@ -15,14 +13,18 @@ export function AISection() {
     <section className="py-24 md:py-32 border-b border-line bg-surface">
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
-        {/* Left: Image (Chatbot/How we do it) */}
-        <div className="relative w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-xl overflow-hidden group">
-          <Image 
-            src="/arivihan-how.png" 
-            alt="AI Chatbot Concept" 
-            fill
-            className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
-          />
+        {/* Left: Chatbot Placeholder */}
+        <div className="relative w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-xl overflow-hidden border border-line bg-bg flex flex-col items-center justify-center p-8 group shadow-sm">
+          <div className="absolute inset-0 bg-dot-pattern opacity-10 pointer-events-none"></div>
+          
+          <div className="w-16 h-16 rounded-full bg-accent text-white flex items-center justify-center mb-6 shadow-lg shadow-accent/20">
+            <i className="ri-robot-2-line text-3xl"></i>
+          </div>
+          
+          <h3 className="text-lg font-bold tracking-tight text-text mb-2 text-center">AI Tutor Interface</h3>
+          <p className="text-sm text-muted text-center max-w-[250px] leading-relaxed">
+            The intelligent conversational guidance and doubt resolution interface will be showcased here.
+          </p>
         </div>
 
         {/* Right: Text Content */}
