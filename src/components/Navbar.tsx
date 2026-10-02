@@ -18,11 +18,12 @@ export function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Problem", href: "#problem" },
-    { name: "Solution", href: "#solution" },
-    { name: "Product", href: "#product" },
-    { name: "Vision", href: "#vision" },
-    { name: "Founder", href: "#founder" },
+    { name: "Features", href: "/features" },
+    { name: "Problem", href: "/#problem" },
+    { name: "Solution", href: "/#solution" },
+    { name: "Product", href: "/#product" },
+    { name: "Vision", href: "/#vision" },
+    { name: "Founder", href: "/#founder" },
   ];
 
   return (
