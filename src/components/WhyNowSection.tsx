@@ -1,34 +1,48 @@
 import React from "react";
-import { SectionHeader } from "./SectionHeader";
+import Image from "next/image";
 
 export function WhyNowSection() {
   return (
-    <section className="py-24 md:py-32 border-b border-line">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <SectionHeader
-          label="05 / WHY NOW"
-          title="Education is moving from content consumption to measurable outcomes."
-          centered
-        />
+    <section className="py-24 md:py-32 border-b border-line bg-surface">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        {/* Left Side: Video Thumbnail */}
+        <div className="relative w-full aspect-video rounded-md overflow-hidden shadow-2xl group cursor-pointer border border-line">
+          <Image 
+            src="/arivihan-video.png" 
+            alt="BrainVers Batch" 
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors z-10 flex items-center justify-center">
+            {/* Play Button Overlay (Optional since image has one, but adds interaction) */}
+          </div>
+        </div>
 
-        <div className="mt-16 md:mt-24 max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-lg md:text-xl font-medium text-muted tracking-wide text-center">
-            <span>CONTENT</span>
-            <span className="text-accent">+</span>
-            <span>PRACTICE</span>
-            <span className="text-accent">+</span>
-            <span>ASSESSMENT</span>
-            <span className="text-accent">+</span>
-            <span>FEEDBACK</span>
-          </div>
+        {/* Right Side: Text & Features */}
+        <div>
+          <p className="text-xs font-bold tracking-widest uppercase text-accent mb-4">
+            INDIA HAS HUNDREDS OF K-12 PLATFORMS, BUT
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-text mb-6">
+            Why BrainVers?
+          </h2>
+          <p className="text-muted leading-relaxed mb-8">
+            BrainVers is built for students who want real board exam and competitive results, not just more video content. We combine AI-powered learning, interactive classes, instant doubt support, notes, and practice sets to help students study with more clarity and confidence.
+          </p>
           
-          <div className="my-8 flex justify-center">
-            <div className="w-full max-w-md h-[1px] bg-line relative before:absolute before:top-1 before:left-0 before:w-full before:h-[1px] before:bg-line" />
-          </div>
-          
-          <div className="text-center text-2xl md:text-4xl font-semibold tracking-tight text-text">
-            CONTINUOUS IMPROVEMENT
-          </div>
+          <ul className="space-y-4">
+            {[
+              "AI-based Interactive Learning",
+              "Personalised as per Your Pace",
+              "Lectures in your Own Language",
+              "Extremely Affordable"
+            ].map((feature, i) => (
+              <li key={i} className="flex items-center gap-3 text-text font-medium">
+                <i className="ri-arrow-right-double-line text-accent text-xl"></i>
+                {feature}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

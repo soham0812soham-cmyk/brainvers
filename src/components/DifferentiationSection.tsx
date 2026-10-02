@@ -1,52 +1,37 @@
 import React from "react";
-import { SectionHeader } from "./SectionHeader";
+import Image from "next/image";
 
 export function DifferentiationSection() {
   return (
-    <section className="py-24 md:py-32 border-b border-line">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <SectionHeader
-          label="07 / PRODUCT PHILOSOPHY"
-          title="Not another content library."
-          subtitle="The core idea is to connect the pieces into a continuous student feedback loop."
-          centered
-        />
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-16 md:mt-24">
-          {/* Left: Fragmented */}
-          <div className="border border-line bg-surface p-8 md:p-12">
-            <h3 className="text-sm font-semibold tracking-widest text-muted uppercase mb-10">
-              Fragmented Journey
-            </h3>
-            
-            <div className="flex flex-col gap-4 mb-10">
-              {["Classes", "Practice", "Tests", "Analytics", "Guidance"].map((item, i) => (
-                <div key={i} className="bg-bg border border-line border-dashed p-4 text-center text-muted">
-                  {item}
-                </div>
-              ))}
-            </div>
-            <p className="text-center text-sm font-medium text-muted">Disconnected experiences.</p>
-          </div>
-
-          {/* Right: Connected */}
-          <div className="border border-accent bg-accent-soft/30 p-8 md:p-12 relative">
-            <h3 className="text-sm font-semibold tracking-widest text-accent uppercase mb-10">
-              Connected Learning Loop
-            </h3>
-            
-            <div className="flex flex-col gap-0 mb-10 relative">
-              <div className="absolute left-6 top-6 bottom-6 w-[2px] bg-accent/20 z-0" />
-              {["Learn", "Practice", "Test", "Identify", "Improve"].map((item, i) => (
-                <div key={i} className="bg-bg border border-line p-4 pl-14 relative z-10 my-2 shadow-sm">
-                  <div className="absolute left-5 top-1/2 -translate-y-1/2 w-3 h-3 bg-accent rounded-full border-2 border-bg" />
-                  <span className="font-medium text-text">{item}</span>
-                </div>
-              ))}
-            </div>
-            <p className="text-center text-sm font-medium text-accent">Connected student feedback loop.</p>
-          </div>
+    <section className="py-24 md:py-32 border-b border-line bg-surface">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        
+        {/* Left: Text Content */}
+        <div>
+          <p className="text-xs font-bold tracking-widest uppercase text-accent mb-4">
+            SOCIAL IMPACT
+          </p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tighter text-text mb-6">
+            Our Mission
+          </h2>
+          <p className="text-muted leading-relaxed mb-6">
+            Millions of students belonging to lower-income segments are constrained to go to local coaching classes available near their homes, because of financial & language constraints. This education is not enough to get the required level of knowledge, especially for competitive exams preparation.
+          </p>
+          <p className="text-muted leading-relaxed mb-8">
+            To solve this problem affecting the careers of millions of students in our country, we are building a highly automated, deeply connected online learning platform to raise the quality of education that they can be proud of, at a price they can afford with a smile.
+          </p>
         </div>
+
+        {/* Right: Image */}
+        <div className="relative w-full aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden group">
+          <Image 
+            src="/arivihan-mission.png" 
+            alt="Subscription Concept" 
+            fill
+            className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+          />
+        </div>
+        
       </div>
     </section>
   );
