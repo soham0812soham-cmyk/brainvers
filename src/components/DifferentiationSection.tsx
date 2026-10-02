@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export function DifferentiationSection() {
   return (
@@ -21,18 +22,14 @@ export function DifferentiationSection() {
           </p>
         </div>
 
-        {/* Right: Placeholder */}
-        <div className="relative w-full aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden border border-line bg-surface flex flex-col items-center justify-center p-8 group">
-          <div className="absolute inset-0 bg-accent/5 pointer-events-none"></div>
-          
-          <div className="w-20 h-20 rounded-full bg-accent text-white flex items-center justify-center mb-6 shadow-xl transition-transform duration-500 group-hover:scale-110">
-            <i className="ri-smartphone-line text-4xl"></i>
-          </div>
-          
-          <h3 className="text-lg font-bold tracking-tight text-text mb-2 text-center">Mobile Experience</h3>
-          <p className="text-sm text-muted text-center max-w-[250px] leading-relaxed">
-            A conceptual preview of the mobile application interface will be displayed here.
-          </p>
+        {/* Right: Image */}
+        <div className="relative w-full aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] rounded-xl overflow-hidden group border border-line shadow-sm">
+          <Image 
+            src="/custom-mobile.jpg" 
+            alt="Mobile Experience Concept" 
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
         </div>
         
       </div>

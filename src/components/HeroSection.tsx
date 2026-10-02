@@ -53,7 +53,7 @@ export function HeroSection() {
         </div>
 
         {/* Right Side - Conceptual UI Placeholder */}
-        <div className="relative w-full aspect-[4/3] flex flex-col justify-center overflow-hidden group border border-line bg-surface rounded-lg shadow-sm">
+        <div className="relative w-full aspect-[4/3] flex flex-col justify-center overflow-hidden group border border-line bg-surface rounded-xl shadow-sm">
           <div className="absolute top-4 right-4 flex items-center gap-2 z-10 bg-bg/80 backdrop-blur-sm px-3 py-1.5 border border-line rounded-full">
             <div className="w-1.5 h-1.5 rounded-full bg-accent"></div>
             <span className="text-[10px] tracking-widest uppercase text-text font-semibold">
@@ -61,15 +61,12 @@ export function HeroSection() {
             </span>
           </div>
           
-          <div className="flex flex-col items-center justify-center h-full opacity-60 group-hover:opacity-100 transition-opacity">
-            <div className="w-20 h-20 rounded-full bg-accent/5 flex items-center justify-center mb-6 border border-accent/10">
-              <i className="ri-layout-masonry-line text-4xl text-accent"></i>
-            </div>
-            <p className="text-sm font-bold tracking-widest uppercase text-text mb-2">Platform Interface</p>
-            <p className="text-xs text-muted/70 text-center max-w-[250px] leading-relaxed">
-              Conceptual product visualization of the student learning journey will be placed here.
-            </p>
-          </div>
+          <Image 
+            src="/custom-hero.jpg" 
+            alt="Product Concept" 
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
         </div>
       </div>
     </section>
